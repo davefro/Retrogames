@@ -1,0 +1,692 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;1,500&family=Orelega+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Navigation */
+
+.navbar {
+  background: #303030;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+/* Logo */
+
+#navbar__logo {
+  background-color: #c34f4f;
+  background-image: linear-gradient(to top, #c34f4f 0%, #fff 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: 'Orelega One', cursive;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.pad{
+  width: 50px;
+  height: 36px;
+}
+
+/* Navigation menu */
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar__item {
+  height: 80px;
+}
+
+.navbar__links {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  text-decoration: none;
+  height: 100%;
+  transition: all 0.3s ease;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+/* Sign up button */
+
+.navbar__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 6px 18px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  background: -webkit-linear-gradient(to right, #ffb199, #F7B34A);
+  background: linear-gradient(to right, #ffb199, #F7B34A);
+  color: #fff;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.navbar__links:hover {
+  color: #c34f4f;
+  transition: all 0.3s ease;
+}
+
+/* Using Media Query to responsive design */
+
+@media screen and (max-width: 960px) {
+  .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0;
+  }
+
+  .navbar__menu {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -1000px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: -1;
+  }
+
+  .navbar__menu.active {
+    background: #131313;
+    top: 100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 99;
+    height: 60vh;
+    font-size: 1.6rem;
+    opacity: 0.9;
+  }
+
+  .logo{
+    padding-left: 25px;
+  }
+
+  .navbar__toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+  }
+
+  .navbar__item {
+    width: 100%;
+  }
+
+  .navbar__links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .navbar__btn {
+    padding-bottom: 2rem;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 50px;
+    margin: 0;
+  }
+
+  #mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+  }
+
+  .navbar__toggle .bar {
+    display: block;
+    cursor: pointer;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .intro{
+    display: none;
+  }
+}
+
+/* Section with banner, text and button */
+
+.banner{
+  width: 100%;
+  height: auto;
+}
+
+.section{
+  position: relative;
+}
+
+.intro{
+  position: absolute;
+  width: 30%;
+  padding-left: 60px;
+  left: 30px;
+  top: 45%;
+}
+
+/* text in banner section */
+h3{
+  color: #fff;
+  font-family: 'Bebas Neue', cursive;
+  padding-bottom: 40px;
+}
+
+/* button in banner section with hover effects */
+.button1{
+  color: #fff;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 3px;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 12px 28px;
+  transition-duration: 2s;
+}
+
+.button1:hover{
+  color: #F7B34A;
+}
+
+
+/* section with image and text under banner section */
+.section-content{
+  background-color: #EFE6E1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px;
+}
+
+/* heading 1 "Retro games are still alive" */
+.title{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 46px;
+  text-shadow: 2px 2px 3px #000;
+  color: #D7C6B2;
+}
+
+/* heading 1 "back to the past, welcome in 80's */
+.title2{
+  background: #EFE6E1;
+  color: #0a9396;
+  text-shadow: 3px 3px 0px #F7B34A, 5px 5px 0px #F7B34A;
+  letter-spacing: 8px;
+  font-size: 42px;
+  text-align: center;
+  padding:80px;
+  font-family: 'BACKTO1982';
+  line-height: 70px;
+}
+
+/* New font added */
+@font-face {
+  font-family:'BACKTO1982' ;
+  src: url('BACKTO1982.TTF');
+}
+
+/* container with 6 boxes  */
+.box-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 3em;
+  background-color: #EFE6E1;
+  background: -webkit-linear-gradient(to bottom, #EFE6E1, #E6D3B3);
+  background: linear-gradient(to bottom, #EFE6E1, #E6D3B3);
+}
+
+
+/* 6 flex boxes with before effects */
+.box1{
+  width:500px;
+  height: 350px;
+  justify-content:center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 10px 10px #adadad; 
+  box-shadow: 0px 0px 15px 5px #a5a5a5;
+  transition: all .3s ease-in-out;
+}
+
+.box1::before{
+  content: "";
+  background-image: url("nes-classic.jpeg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-position: center;
+  opacity: 0.2;
+}
+
+.box2{
+  width: 500px;
+  height: 350px;
+  justify-content:center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 10px 10px #adadad; 
+  box-shadow: 0px 0px 15px 5px #a5a5a5;
+  transition: all .3s ease-in-out;
+}
+
+.box2::before{
+  content: "";
+  background-image: url("c64.jpg");
+  background-size: cover;
+  position: absolute;
+  background-position: center;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+}
+
+.box3{
+  width: 500px;
+  height: 350px;
+  justify-content:center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 10px 10px #adadad; 
+  box-shadow: 0px 0px 15px 5px #a5a5a5;
+  transition: all .3s ease-in-out;
+}
+
+.box3::before{
+  content: "";
+  background-image: url("sega-genesis.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+  background-position: center;
+}
+
+.box4{
+  width: 500px;
+  height: 350px;
+  justify-content:center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 10px 10px #adadad; 
+  box-shadow: 0px 0px 15px 5px #a5a5a5;
+  transition: all .3s ease-in-out;
+}
+
+.box4::before{
+  content: "";
+  background-image: url("psx.jpeg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+}
+
+.box5{
+  width: 500px;
+  height: 350px;
+  justify-content:center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 10px 10px #adadad; 
+  box-shadow: 0px 0px 15px 5px #a5a5a5;
+  transition: all .3s ease-in-out;
+}
+
+.box5::before{
+  content: "";
+  background-image: url("atari2.jpg");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+}
+
+.box6{
+  width: 500px;
+  height: 350px;
+  justify-content:center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 10px 10px #adadad; 
+  box-shadow: 0px 0px 15px 5px #a5a5a5;
+  transition: all .3s ease-in-out;
+}
+
+.box6::before{
+  content: "";
+  background-image: url("nes-mini.jpg");
+  background-size: cover;
+  position: absolute;
+  background-position: center;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+}
+
+/* enlargement effect in boxes */
+.box1:hover{
+  transform:scale(1.1);
+}
+.box2:hover{
+  transform:scale(1.1);
+}
+.box3:hover{
+  transform:scale(1.1);
+}
+.box4:hover{
+  transform:scale(1.1);
+}
+.box5:hover{
+  transform:scale(1.1);
+}
+.box6:hover{
+  transform:scale(1.1);
+}
+
+/* console title in a box */
+.h2{
+  padding-bottom: 10px;
+}
+
+.text-content{
+  color: #000;
+  font-size: 32px;
+  position: relative;
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 25px;
+  line-height: 6vh;
+  color: rgb(87, 87, 87);
+}
+
+/* buttons in a box with hover effects */
+button {
+  transition: all .5s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
+  background-color: #0a9396;
+  color: #fff;
+  font-family: 'Bebas Neue', cursive;
+}
+
+button a{
+  text-decoration: none;
+  color: #fff;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #ee9b00;
+}
+
+/* container with image "game start" and animation */
+.PCM{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #E6D3B3;
+  flex-wrap: wrap;
+}
+
+.game2{
+  display: flex;
+  align-items: center;
+}
+
+/* gameover section */
+.gameover{
+  background-color: #E6D3B3;
+  text-align: center;
+  padding-bottom: 150px;
+}
+
+/* footer on the bottom */
+.footer{
+  padding: 30px 0;
+  background-color: #303030;
+}
+
+/* unordered list in footer and hover effects */
+.footer ul{
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.footer ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.footer ul li{
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.footer ul li a:hover{
+  opacity: 0.5;
+}
+
+/* social icon */
+.social{
+  text-align: center;
+  padding-bottom: 25px;
+  color: #fff;
+}
+
+.social a{
+  font-size: 24px;
+  color: inherit;
+  border: 1px solid #fff;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 10px;
+  background: -webkit-linear-gradient(to right, #ffb199, #F7B34A);
+  background: linear-gradient(to right, #ffb199, #F7B34A);
+}
+
+.social a:hover{
+  opacity: 0.5;
+}
+
+.copyright{
+  margin-top: 15px;
+  text-align: center;
+  font-size: 10px;
+  color: #aaa;
+}
+
+
+/* SUBPAGE */
+
+
+/* heading 4 in subpage, name of the console */
+h4{
+  padding-top: 10px;
+  font-size: 30px;
+  font-family: 'Bebas Neue';
+}
+
+/* paragraph in subpage */
+p{
+  padding-top:35px;
+}
+
+/* text content in subpage */
+aside{
+  padding: 0px 100px 0px 100px;
+  width: 50%;
+}
+
+/* article with main content in subpage */
+.main-content{
+  background-color: #EDEDED;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  position: relative;
+  display: flex;
+  text-align: center;
+}
+
+/* slide container in subpage */
+.slide-container{
+  width: 800px;
+  height: 450px;
+  overflow: hidden;
+}
+
+/* image container in subpage */
+.image-container{
+  width: 2400px;
+  height: 450px;
+  position: relative;
+  transition: 2s;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -o-transition: 2s;
+}
+
+/* slider image in subpage */
+.slider-image{
+  float:left;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* button in container in subpage */
+.button-container{
+  top: -20px;
+  position: relative;
+  text-align: center;
+}
+
+/* small orange button in subpage */
+.slider-button{
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: #ee9b00;
+  text-align: center;
+}
+
+/* button used for slide image */
+#slider-image-1:target ~ .image-container{
+  left: 0px;
+}
+#slider-image-2:target ~ .image-container{
+  left: -800px;
+}
+#slider-image-3:target ~ .image-container{
+  left: -1600px;
+}

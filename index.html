@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>RETROGAMES</title>
+</head>
+<body>
+    
+<!--Navigation with mobile menu-->
+    <nav class="navbar">
+        <div class="navbar__container">
+           <div class="logo">
+                <img class="pad" src="pad.png">
+                <a href="#home" id="navbar__logo">RETRO GAM<img class="pacman" src="pacman4.png">S</a>
+           </div>
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span> 
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="navbar__menu">
+            <li class="navbar__item">
+              <a href="#home" class="navbar__links" id="home-page">HOME</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#about" class="navbar__links" id="about-page">ABOUT</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#games" class="navbar__links" id="services-page"
+                >GAMES</a
+              >
+            </li>
+            <li class="navbar__btn">
+              <a href="#sign-up" class="button" onclick="myFunction()" id="signup">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+<!--Section with banner and text-->
+    <div class="section">
+      <img class='banner' src="banner2.jpg">
+      <div class="intro">
+        <h3>Welcome to the world of old games that for­med the history of the video gaming in­dus­try. These games consoles represent the best vi­de­o games for the generations of those olden days.</h3>
+        <a href="#" class="button1" onclick="NewTab()" id="learnmore">LEARN MORE</a>
+      </div>
+    </div>
+
+<!--Section with image and text-->
+    <section class="section-content">
+      <img class='img1' src="img1.jpeg">
+      <h1 class="title">The Retro games<br> are still alive!</h1>
+    </section>
+    <h1 class="title2">BACK TO THE PAST<br> WELCOME IN THE 80's</h1>
+
+<!--Article with 6 boxes and main content-->    
+    <article class="box-content">
+      <div class="box1">
+        <div class="text-content">
+          <h2 class="h2">Nintendo Classic</h2>
+          <button><a href="nintendoclassic.html" target="_blank">Learn More</a></button>
+        </div>
+      </div>
+      <div class="box2">
+        <div class="text-content">
+          <h2 class="h2">The Commodore 64</h2>
+          <button><a href="thecommodore64.html" target="_blank">Learn More</a></button>
+        </div>  
+      </div>
+      <div class="box3">
+        <div class="text-content">
+          <h2 class="h2">Sega Genesis</h2>
+          <button><a href="segagenesis.html" target="_blank">Learn More</a></button>
+        </div>
+      </div>
+      <div class="box4">
+        <div class="text-content">
+          <h2 class="h2">Playstation Classic</h2>
+          <button><a href="psxclassic.html" target="_blank">Learn More</a></button>
+        </div>
+      </div>
+      <div class="box5">
+        <div class="text-content">
+          <h2 class="h2">Atari Flashback</h2>
+          <button><a href="atariflashback.html" target="_blank">Learn More</a></button>
+        </div>
+      </div>
+      <div class="box6">
+        <div class="text-content">
+          <h2 class="h2">Super NES Classic</h2>
+          <button><a href="supernesclassic.html" target="_blank">Learn More</a></button>
+        </div>  
+      </div>
+    </article>
+
+<!--div with image and animation-->
+    <div class="PCM">
+      <img src="gamestart.jpg">
+      <div class="game2">
+        <div class="game3">
+          <img class="game1" src="https://media.giphy.com/media/l41m3ywjOxm9SzAhG/giphy.gif">
+        </div>
+      </div>
+    </div>
+
+<!--Gameover image-->
+    <div class="gameover">
+      <img src="https://media.giphy.com/media/JUSwkiO1Eh5K43ruN0/giphy.gif">
+    </div>
+
+<!--Footer section with social icons and unordered list-->
+    <section class="footer">
+      <div class="social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-snapchat"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </div>
+
+      <ul class="list">
+        <li>
+          <a href="#">HOME</a>
+        </li>
+        <li>
+          <a href="#">GAMES</a>
+        </li>
+        <li>
+          <a href="#">ABOUT</a>
+        </li>
+        <li>
+          <a href="#">CONTACT</a>
+        </li>
+        <li>
+          <a href="#">TERMS</a>
+        </li>
+        <li>
+          <a href="#">PRIVACY POLICY</a>
+        </li>
+      </ul>
+      <p class="copyright">Retrogames Copyright &copy; 2022</p>
+    </section>
+
+<!--Added javascript to my document-->    
+  <script src="script.js"></script>
+</body>
+</html>
